@@ -1,0 +1,76 @@
+#nav-bar {
+  // font-family: 'Nunito', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  position: fixed;
+  width: 100vw;
+  padding-right: 30px;
+  top: 0;
+  height: 80px;
+  font-weight: 900;
+}
+
+/*"transparent-nav" : "visible-nav"*/
+.transparent-nav {
+  z-index: 10;
+  a{
+    color: white;
+    text-align: center;
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+.visible-nav {
+  background-color: white;
+  z-index: 10;
+  a {
+    color: grey !important;
+    &:hover {
+      color: black !important;
+    }
+  }
+  .brand-name {
+    color: orangered !important;
+    font-weight: 800 !important;
+  }
+}
+
+.side-menu {
+  border-top-right-radius: 10px;
+}
+
+
+.cart {
+  font-size: 0.9em;
+  display: flex;
+  gap: 3px;
+}
+
+.bubble {
+  background-color: #001524;
+  position: relative;
+  bottom: 8px;
+  left: 3px;
+  font-size: 0.6em;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+@media (max-width: 990px) {
+  .bubble {
+    left: -12px;
+  }
+  .bubble-1 {
+    left: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+.shopping-display {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: minmax(60vh,1fr) 90vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Merriweather', serif;
+
+  .shopping-nav {
+    padding: 20px 0;
+  }
+
+  .shopping-main {
+    min-height: 70vh;
+    background-color:  #ffffff;
+    padding: 0;
+  }
+  .shopping-footer {
+    grid-area: -2/-3/-1/-1;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .shopping-display {
+    display: flex;
+    flex-direction: column;
+  }
+}

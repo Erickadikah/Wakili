@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Ubuntu&display=swap');
+
+%flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.item-page {
+    display: grid;
+    grid-template-rows: 60vh minmax(200px, auto) 70vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 25px;
+    padding-top: 50px;
+    grid-row-gap: 50px;
+    .container {
+        padding: 20px 15px;
+    }
+    .item {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        background-color: #F8F7FA;
+        .product-image {
+            img {
+                width: 300px;
+                object-fit: contain;
+            }
+        }
+        .description {
+            .content {
+                width: 90%;
+                max-height: 70vh;
+                @extend %flex-box;
+                flex-direction: column;
+                gap: 20px;
+                text-align: justify;
+            }
+            @extend %flex-box;
+        }
+    }
+    .related-items {
+        .rel-title {
+            font-size: 20px;
+        }
+    }
+}
+
+.actions {
+    .quantity-added {
+        display: flex;
+    }
+}
+
+
+.cart-btn {
+    width:  150px;
+}
+
+.other-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-auto-rows: 80px;
+    grid-column-gap: 10px;
+    .image-container {
+        background-color: #F7F7F7;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+@media (min-width: 1000px) {
+    .item-page {
+        padding-top: 55px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .item-page {
+        .item {
+            display: flex;
+            flex-flow: column wrap;
+        }
+    }
+}
+
+*/
+
+.item-page {
+    overflow-x: hidden;
+    .item-banner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 30px;
+        .product-image {
+            min-height: 50vh;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .item-page {
+        .item-banner {
+            display: flex;
+            flex-flow: column wrap;
+        }
+    }
+}

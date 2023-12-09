@@ -1,0 +1,13 @@
+.sign-up-container {
+    background-color: #001524;
+}
+.sign-up-form {
+    margin-top: 60px !important;
+    border-radius: 5px;
+}
+
+@media (min-width: 1000px) {
+    .sign-up-form {
+        width: 420px !important;
+    }
+}

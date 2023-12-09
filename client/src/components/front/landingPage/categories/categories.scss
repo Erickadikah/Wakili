@@ -1,0 +1,100 @@
+// @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Lora&family=Metal+Mania&family=Mooli&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&family=Inter:wght@100&family=Montserrat:ital,wght@0,100;1,200&family=Poppins&family=Roboto:ital,wght@0,500;0,900;1,900&display=swap");
+
+%flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+%flex-column {
+  @extend %flex-box;
+  flex-direction: column !important;
+}
+
+.product-category-container {
+  //   font-family: 'Caesar Dressing', cursive;
+  //   font-family: 'Lora', serif;
+  //   font-family: 'Metal Mania', cursive;
+  //   font-family: 'Mooli', sans-serif;
+  //   font-family: 'Nunito Sans', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  margin: 10px auto;
+  .product-category {
+    h1,
+    h3 {
+      margin: 0;
+      font-size: 35px;
+      font-weight: 800;
+    }
+    p {
+      margin: 8px;
+      color: gray;
+      font-family: "Mooli", sans-serif;
+    }
+
+    @extend %flex-column;
+    .categories {
+      @extend %flex-box;
+      .category {
+        width: minmax(100px, 120px);
+        height: minmax(100px, 120px);
+        margin: 10px;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 80% minmax(20%, 1fr);
+        grid-gap: 30px;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s,
+          color 0.2s ease-in 0.1s;
+        cursor: pointer;
+        .img-icon {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        .category-image {
+          background-color: lightgray;
+          border-radius: 50%;
+          grid-area: 1/1/2/2;
+          width: 80px;
+          height: 80px;
+          @extend %flex-column;
+          &:hover {
+            border: 3px solid #50c878;
+          }
+        }
+        .category-link {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+.bg-grad {
+  background: linear-gradient(45deg, #8b4513, #d2691e, #cd853f);
+}
+
+@media (min-width: 1000px) {
+  .product-category-container {
+    .product-category {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .product-category-container {
+    .product-category {
+      padding-top: 10px;
+    }
+  }
+}
